@@ -1,3 +1,4 @@
+[![CI](https://github.com/nogibjj/Mobasserul_Haque_MiniProject1/actions/workflows/cicd.yml/badge.svg)](https://github.com/nogibjj/Mobasserul_Haque_MiniProject1/actions/workflows/cicd.yml)
 Python Template for week1 mini project IDS706
 # Palindrome Checker
 
