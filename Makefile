@@ -20,14 +20,6 @@ lint:
 # Run tests using Pytest
 test:
 	$(PYTHON) -m pytest --cov=palindrome_checker test_palindrome_checker.py
-
-# Build Docker image
-docker-build:
-	$(DOCKER) build -f .devcontainer/Dockerfile -t python-dev .
-
-# Run Docker container
-docker-run:
-	$(DOCKER) run --rm -v "$(PWD)":/workspace -p 8000:8000 python-dev
-
+	
 # Default target
 all: install format lint test
