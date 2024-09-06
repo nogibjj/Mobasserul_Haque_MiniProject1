@@ -1,7 +1,7 @@
 name: Mobasserul Haque_Palindrome Checker with Github Actions 
 on:
   schedule:
-  - cron:  '0 3 * * SUN'
+  - cron: '0 3 * * SUN'
   push:
     branches: [ "main" ]
   pull_request:
@@ -15,22 +15,22 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Setup Python 3.8
-        uses: actions/setup-python@v1
+        uses: actions/setup-python@v4
         with: 
           python-version: 3.8
           
-      - name: install packages and dependencies
+      - name: Install packages and dependencies
         run: |
           make install
-      - name: lint with pylint
+      - name: Lint with pylint
         run: |
           make lint
-      - name: test with pytest
+      - name: Test with pytest
         run: |
           make test
-      - name: format with black 
+      - name: Format with black 
         run: |
           make format
-      - name: deploy the app
+      - name: Deploy the app
         run: |
           make deploy
